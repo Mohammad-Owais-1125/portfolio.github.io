@@ -4,41 +4,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Owias | Portfolio</title>
+  <title>Owais | Portfolio</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
     body {
       scroll-behavior: smooth;
-      background-color: #f8f9fa;
+      background: #f4f6f9;
+      font-family: "Inter", sans-serif;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .nav-link:hover {
+      color: #0d6efd !important;
     }
 
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') center/cover no-repeat;
-      color: white;
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') center/cover;
+      color: #fff;
+      padding: 150px 0;
+      text-align: center;
     }
 
-    .navbar-brand span {
-      color: #0d6efd;
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
     }
 
-    .skill-box:hover {
-      transform: translateY(-8px);
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      transform: scale(1.02);
-      transition: 0.3s;
+    .hero p {
+      opacity: .9;
     }
 
     #about img {
-      border: 4px solid #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: .3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card {
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    footer {
+      background: #0d1117;
+      color: white;
     }
   </style>
 </head>
@@ -46,54 +80,66 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3">
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center fw-bold fs-5" href="#home">
-        <img src="img/logo.png" alt="Logo" width="40" height="40" class="me-2">
-      </a>
+      <a class="navbar-brand" href="#home">Owais<span class="text-primary">.</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav fw-semibold">
-          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="hero d-flex align-items-center min-vh-100 text-center">
+  <section id="home" class="hero d-flex align-items-center">
     <div class="container">
-      <h1 class="fw-bold display-4 mb-3">Hi, I'm <span class="text-primary">Owais</span></h1>
-      <p class="fs-5 mb-4"><span class="changing-text"></span></p>
-      <a href="#projects" class="btn btn-primary btn-lg px-4 py-2">Explore My Work</a>
+      <h1>Hello, I'm <span class="text-primary">Owais</span></h1>
+      <p class="mt-3">
+        <span class="changing-text">Full Stack Developer</span>
+      </p>
+      <a href="#projects" class="btn btn-primary btn-lg mt-4 px-4">View My Work</a>
     </div>
   </section>
+
 
   <!-- About -->
   <section id="about" class="py-5">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-md-5 text-center">
-          <img src="img/logo.png" alt="Owias" class="img-fluid rounded-4 shadow" />
+          <img src="img/images.png" class="img-fluid" alt="Profile" />
         </div>
         <div class="col-md-7">
           <h2 class="fw-bold mb-3">About Me</h2>
-          <p class="text-muted mb-4">
-            I'm a passionate Full Stack Developer with hands-on experience in building modern, scalable,
-            and responsive web applications. I specialize in <strong>MERN Stack, PHP, APIs, and MySQL</strong>.
-            I enjoy solving real-world problems, creating clean UI/UX, and developing high-performing systems.
-            I have also built an online marketplace for used auto parts and multiple professional dashboards.
+          <p class="text-muted">
+            My name is Owais I'm a passionate <strong>Full Stack Developer</strong> with hands-on experience in building
+            modern,
+            scalable, and user-friendly digital products. I specialize in <strong>MERN Stack, PHP, MySQL</strong>
+            allowing me to create complete web solutions from front to back.
           </p>
-          <p class="text-muted mb-4">
-            My goal is to deliver high‑quality code, modern interfaces, and seamless user experiences.
+          <p class="text-muted">
+            I enjoy designing clean, intuitive interfaces and transforming ideas into smooth, fast, and functional
+            applications. Whether it’s dashboards, portfolio sites, business solutions, or full-stack apps, I focus on:
           </p>
-          <div class="d-flex gap-3">
+          <ul class="text-muted">
+            <li>Clean and modern UI</li>
+            <li>Smooth & meaningful user experience</li>
+            <li>Scalable, maintainable, and efficient code</li>
+            <li>Fast performance and responsive design</li>
+          </ul>
+          <p class="text-muted">
+            My goal is to develop products that not only look great but also solve real problems and deliver value to
+            users.
+          </p>
+          <div class="d-flex gap-3 mt-3">
             <a href="#contact" class="btn btn-outline-primary">Hire Me</a>
             <a href="#" class="btn btn-primary">Download CV</a>
           </div>
@@ -105,87 +151,49 @@
   <!-- Skills -->
   <section id="skills" class="py-5 bg-light">
     <div class="container text-center">
-      <h2 class="fw-bold mb-5">My Skills</h2>
+      <h2 class="fw-bold mb-5">Skills</h2>
       <div class="row g-4 justify-content-center">
 
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-filetype-html display-5 text-danger"></i>
-            <h6 class="mt-2">HTML5</h6>
+          <div class="skill-box"><i class="bi bi-filetype-html display-5 text-danger"></i>
+            <h6 class="mt-2">HTML</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-filetype-css display-5 text-primary"></i>
-            <h6 class="mt-2">CSS3</h6>
+          <div class="skill-box"><i class="bi bi-filetype-css display-5 text-primary"></i>
+            <h6 class="mt-2">CSS</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-filetype-js display-5 text-warning"></i>
+          <div class="skill-box"><i class="bi bi-filetype-js display-5 text-warning"></i>
             <h6 class="mt-2">JavaScript</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-bootstrap-fill display-5 text-purple"></i>
+          <div class="skill-box"><i class="bi bi-bootstrap-fill display-5 text-purple"></i>
             <h6 class="mt-2">Bootstrap</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-code-slash display-5 text-info"></i>
+          <div class="skill-box"><i class="bi bi-code-slash display-5 text-info"></i>
             <h6 class="mt-2">Python</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-git display-5 text-danger"></i>
+          <div class="skill-box"><i class="bi bi-git display-5 text-danger"></i>
             <h6 class="mt-2">Git</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-lightning-charge-fill display-5 text-primary"></i>
-            <h6 class="mt-2">React.js</h6>
+          <div class="skill-box"><i class="bi bi-lightning-charge-fill display-5 text-primary"></i>
+            <h6 class="mt-2">React</h6>
           </div>
         </div>
-
         <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-server display-5 text-success"></i>
+          <div class="skill-box"><i class="bi bi-server display-5 text-success"></i>
             <h6 class="mt-2">Node.js</h6>
           </div>
         </div>
-
-        <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <i class="bi bi-box display-5 text-dark"></i>
-            <h6 class="mt-2">Next.js</h6>
-          </div>
-        </div>
-
-        <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="50" />
-            <h6 class="mt-2">PHP</h6>
-          </div>
-        </div>
-
-        <div class="col-md-2 col-6">
-          <div class="skill-box p-4 shadow-sm rounded-3 text-center">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-              width="50" />
-            <h6 class="mt-2">MySQL</h6>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -193,38 +201,39 @@
   <!-- Projects -->
   <section id="projects" class="py-5">
     <div class="container">
-      <h2 class="fw-bold text-center mb-5">Featured Projects</h2>
+      <h2 class="fw-bold text-center mb-5">Projects</h2>
       <div class="row g-4">
 
         <div class="col-md-4">
-          <div class="card border-0 shadow-sm project-card">
-            <img src="https://via.placeholder.com/400x250" class="card-img-top" />
+          <div class="card project-card shadow-sm">
+            <img src="img/port.png" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Portfolio Website</h5>
-              <p class="card-text text-muted">A clean and modern portfolio showcasing my work and skills.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+              <h5>Portfolio Website</h5>
+              <p class="text-muted">Clean and modern personal portfolio website.</p>
+              <a href="https://mohammad-owais-1125.github.io/portfolio.github.io/"
+                class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card border-0 shadow-sm project-card">
-            <img src="https://via.placeholder.com/400x250" class="card-img-top" />
+          <div class="card project-card shadow-sm">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Online Marketplace</h5>
-              <p class="card-text text-muted">A used auto parts marketplace with a complete frontend and backend.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+              <h5>Online Marketplace</h5>
+              <p class="text-muted">Used auto parts marketplace with full backend.</p>
+              <a href="https://github.com/Mohammad-Owais-1125/ECO" class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card border-0 shadow-sm project-card">
-            <img src="https://via.placeholder.com/400x250" class="card-img-top" />
+          <div class="card project-card shadow-sm">
+            <img src="img/typing.png" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">E-Commerce UI</h5>
-              <p class="card-text text-muted">A responsive and visually appealing e‑commerce interface.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+              <h5>E-Commerce UI</h5>
+              <p class="text-muted">A modern responsive e-commerce frontend.</p>
+              <a href="https://mohammad-owais-1125.github.io/typing.github.io/" class="btn btn-outline-primary btn-sm">View</a>
             </div>
           </div>
         </div>
@@ -235,14 +244,14 @@
 
   <!-- Contact -->
   <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-4">Contact Me</h2>
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Contact Me</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <div class="p-4 shadow-sm rounded-3 bg-white">
-            <p class="mb-2"><i class="bi bi-envelope"></i> your-email@gmail.com</p>
-            <p class="mb-2"><i class="bi bi-telephone"></i> +92 3xx xxx xxxx</p>
-            <p class="mb-0"><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+          <div class="p-4 bg-white shadow-sm rounded-3">
+            <p><i class="bi bi-envelope"></i> owais234789@gmail.com</p>
+            <p><i class="bi bi-telephone"></i> +92 3163900255</p>
+            <p><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
           </div>
         </div>
       </div>
@@ -250,9 +259,10 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-0">© 2025 Owias | Designed & Built with ❤️</p>
+  <footer class="py-4 text-center">
+    <p class="mb-0">© 2025 Owais | Designed & Built with ❤️</p>
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script/script.js"></script>
